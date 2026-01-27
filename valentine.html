@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="valentine.css">
+</head>
+<body>
+    <div id="question-container" class="container">
+        <img src="valentine-question.gif" alt="Will you be my valentine?" class="gif">
+        <h1>Will You Be My Valentine?</h1>
+        <div class="button-container">
+            <button id="yes-btn" class="yes-button">Yes</button>
+            <button id="no-btn" class="no-button">No</button>
+        </div>
+    </div>
+
+    <div id="celebration-container" class="container hidden">
+        <img src="valentine-celebration.gif" alt="Celebration!" class="gif">
+        <h1>Yay! You said yes! 💕</h1>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        const yesBtn = document.getElementById('yes-btn');
+        const noBtn = document.getElementById('no-btn');
+        const questionContainer = document.getElementById('question-container');
+        const celebrationContainer = document.getElementById('celebration-container');
+
+        yesBtn.addEventListener('click', function() {
+            clickCount++;
+            
+            if (clickCount < 5) {
+                yesBtn.textContent = 'Are you sure?';
+                yesBtn.classList.add('grow-' + clickCount);
+                celebrationContainer.classList.add('hidden');
+            } else {
+                questionContainer.classList.add('hidden');
+                celebrationContainer.classList.remove('hidden');
+                document.body.style.backgroundColor = '#FFB6C1';
+            }
+        });
+
+        noBtn.addEventListener('click', function() {
+            // Does nothing
+        });
+    </script>
+</body>
+</html>

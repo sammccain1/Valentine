@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.gif {
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.yes-button {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.yes-button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+.no-button {
+    background-color: #ddd;
+    color: #666;
+}
+
+.no-button:hover {
+    background-color: #ccc;
+}
+
+/* Growth classes for the yes button */
+.yes-button.grow-1 {
+    font-size: 1.4rem;
+    padding: 18px 48px;
+}
+
+.yes-button.grow-2 {
+    font-size: 1.6rem;
+    padding: 22px 56px;
+}
+
+.yes-button.grow-3 {
+    font-size: 1.9rem;
+    padding: 26px 64px;
+}
+
+.yes-button.grow-4 {
+    font-size: 2.2rem;
+    padding: 30px 72px;
+}
