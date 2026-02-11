@@ -15,10 +15,13 @@ body {
     padding: 20px;
 }
 
+
+/* Utility class to hide elements */
 .hidden {
     display: none;
 }
 
+/* image size and spacing */
 .gif {
     max-width: 400px;
     width: 100%;
@@ -26,13 +29,14 @@ body {
     border-radius: 10px;
 }
 
+/* CUSTOMIZE: Main heading colors, customize colors using hex codes or color names */
 h1 {
     color: #ff69b4;
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
 }
-
+/* CUSTOMIZE: Celebration message color and font size, customize colors using hex codes or color names */
 h2 {
     color: #ff69b4;
     font-size: 1.5rem;
@@ -57,13 +61,15 @@ button {
     font-weight: bold;
 }
 
+/* CUSTOMIZE: "Yes" button colors */
 .yes-button {
-    background-color: #ff69b4;
-    color: white;
+    background-color: #ff69b4;  /* Change this for button background color */
+    color: white;  /* Change this for button text color */
 }
 
+/* CUSTOMIZE: "Yes" button hover color (when mouse is over it) */
 .yes-button:hover {
-    background-color: #ff1493;
+    background-color: #ff1493;  /* Change this for hover color */
     transform: scale(1.05);
 }
 

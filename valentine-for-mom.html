@@ -1,3 +1,6 @@
+Valentine for mom · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,9 @@
     <link rel="stylesheet" href="valentine.css">
 </head>
 <body>
+    <!-- HTML SECTION -->
     <div id="question-container" class="container">
+        <!-- CUSTOMIZE: Change "valentine-question.gif" to use your own GIF -->
         <img src="valentine-question.gif" alt="Will you be my valentine?" class="gif">
         <h1>Will You Be My Valentine?</h1>
         <div class="button-container">
@@ -17,11 +22,14 @@
     </div>
 
     <div id="celebration-container" class="container hidden">
+        <!-- CUSTOMIZE: Change "valentine-celebration.gif" to use your own GIF -->
         <img src="valentine-celebration.gif" alt="Celebration!" class="gif">
         <h1>Yay! You said yes! 💕</h1>
+        <!-- Edit Here For Customization-->
         <h2>I love you Mom</h2>
     </div>
 
+    <!-- JavaScript SECTION-->
     <script>
         let clickCount = 0;
         const yesBtn = document.getElementById('yes-btn');
@@ -31,14 +39,19 @@
 
         yesBtn.addEventListener('click', function() {
             clickCount++;
-            
+            // Click counter logic
+            // CUSTOMIZE: Change the number 5 to make the button grow faster (lower) or slower (higher)
             if (clickCount < 5) {
+                // CUSTOMIZE: Change "Are you sure?" to any text you want
                 yesBtn.textContent = 'Are you sure?';
+                // Grow the button on each click
                 yesBtn.classList.add('grow-' + clickCount);
                 celebrationContainer.classList.add('hidden');
             } else {
+                // Once click count is over 5 show celebration container, hide initial container
                 questionContainer.classList.add('hidden');
                 celebrationContainer.classList.remove('hidden');
+                // CUSTOMIZE: Change '#FFB6C1' to any color (try: '#FFD700' for gold, '#E6E6FA' for lavender)
                 document.body.style.backgroundColor = '#FFB6C1';
             }
         });
